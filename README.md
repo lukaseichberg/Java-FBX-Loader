@@ -36,37 +36,37 @@ Documentation
 Contents
 ---------------------
 
-- [Class FBXLoader](#clas-fbxloader)
+- [Class FBXLoader](#class-fbxloader)
   - [Functions](#functions)
-    - [loadFBXFile(String filePath)](#FBXLoader.loadFBXFile)
-- [Class FBXFile](#FBXFile)
-  - [Functions](#FBXFile_Functions)
-    - [getFilePath()](#FBXFile.getFilePath)
-    - [getRootNode()](#FBXFile.getRootNode)
-    - [getVersion()](#FBXFile.getVersion)
-- [Class FBXNode](#FBXNode)
-  - [Functions](#FBXNode_Functions)
-    - [getChild()](#FBXNode.getChild)
-    - [getChildByName(String name)](#FBXNode.getChildByName)
-    - [getChildrenByName(String name)](#FBXNode.getChildrenByName)
-    - [getName()](#FBXNode.getName)
-    - [getNodeFromPath(String path)](#FBXNode.getNodeFromPath)
-    - [getNumChildren()](#FBXNode.getNumChildren)
-    - [getNumProperties()](#FBXNode.getNumProperties)
-    - [getParent()](#FBXNode.getParent)
-    - [getProperty(int index)](#FBXNode.getProperty)
-- [Class FBXProperty](#FBXProperty)
-  - [Functions](#FBXProperty_Functions)
-    - [getData()](#FBXProperty.getData)
-    - [getDataType()](#FBXProperty.getDataType)
-    - [getParent()](#FBXProperty.getParent)
-- [Enum FBXDataType](#FBXDataType)
-  - [Members](#FBXDataType_Members)
-  - [Functions](#FBXDataType_Functions)
-    - [isArray()](#FBXDataType.isArray)
-    - [isCategory(FBXDataCategory category)](#FBXDataType.isCategory)
-- [Enum FBXDataCategory](#FBXDataCategory)
-  - [Membes](#FBXDataCategory_Members)
+    - [loadFBXFile(String filePath)](#loadfbxfilestring-filepath)
+- [Class FBXFile](#class-fbxfile)
+  - [Functions](#functions-1)
+    - [getFilePath()](#getfilepath)
+    - [getRootNode()](#getrootnode)
+    - [getVersion()](#getversion)
+- [Class FBXNode](#class-fbxnode)
+  - [Functions](#functions-2)
+    - [getChild(int index)](#getchildint-index)
+    - [getChildByName(String name)](#getchildbynamestring-name)
+    - [getChildrenByName(String name)](#getchildrenbynamestring-name)
+    - [getName()](#getname)
+    - [getNodeFromPath(String path)](#getnodefrompathstring-path)
+    - [getNumChildren()](#getnumchildren)
+    - [getNumProperties()](#getnumproperties)
+    - [getParent()](#getparent)
+    - [getProperty(int index)](#getpropertyint-index)
+- [Class FBXProperty](#class-fbxproperty)
+  - [Functions](#functions-3)
+    - [getData()](#getdata)
+    - [getDataType()](#getdatatype)
+    - [getParent()](#getparent-1)
+- [Enum FBXDataType](#enum-fbxdatatype)
+  - [Members](#members)
+  - [Functions](#functions-4)
+    - [isArray()](#isarray)
+    - [isCategory(FBXDataCategory category)](#iscategoryfbxdatacategory-category)
+- [Enum FBXDataCategory](#enum-fbxdatacategory)
+  - [Membes](#members-1)
 
 
 
@@ -80,7 +80,7 @@ Contents
 
 
 
-#### <a name="FBXLoader.loadFBXFile" />loadFBXFile(String filePath)
+#### loadFBXFile(String filePath)
 
 Loads and processes a FBX file and returns **FBXFile**.
 
@@ -98,7 +98,7 @@ try {
 
 
 
-## <a name="FBXFile" />Class FBXFile
+## Class FBXFile
 
 ### Functions
 
@@ -110,7 +110,7 @@ try {
 
 
 
-#### <a name="FBXFile.getFilePath" />getFilePath()
+#### getFilePath()
 
 Returns the absolute file path as a **String**.
 
@@ -122,7 +122,7 @@ String filePath = file.getFilePath();
 
 
 
-#### <a name="FBXFile.getRootNode" />getRootNode()
+#### getRootNode()
 
 Returns the root node as a **FBXNode**.
 
@@ -134,7 +134,7 @@ FBXNode rootNode = file.getRootNode();
 
 
 
-#### <a name="FBXFile.getVersion" />getVersion()
+#### getVersion()
 
 Returns the FBX version as a **int**.
 
@@ -154,12 +154,12 @@ if (version != 7400) {
 
 
 
-<a name="FBXNode" />Class FBXNode
+Class FBXNode
 ---------
 
 **A node can have multiple children with the same name!**
 
-### <a name="FBXNode_Functions" />Functions
+### Functions
 
 | Type     | Function                       | Return Type     | Description                                                  |
 | -------- | ------------------------------ | --------------- | ------------------------------------------------------------ |
@@ -175,7 +175,7 @@ if (version != 7400) {
 
 
 
-#### <a name="FBXNode.getChild" />getChild(int index)
+#### getChild(int index)
 
 Returns a child node at the specified index as **FBXNode**.
 
@@ -192,7 +192,7 @@ for (int i = 0; i < count; i++) {
 
 
 
-#### <a name="FBXNode.getChildByName" />getChildByName(String name)
+#### getChildByName(String name)
 
 Returns the first found child node with the specified name. If found, returns **FBXNode**. If not found, returns **null**.
 
@@ -205,7 +205,7 @@ FBXNode objectsNode = rootNode.getChildByName("Objects");
 
 
 
-#### <a name="FBXNode.getChildrenByName" />getChildrenByName(String name)
+#### getChildrenByName(String name)
 
 Returns a list of child nodes with the specified name as **List\<FBXNode\>**.
 
@@ -222,7 +222,7 @@ for (FBXNode node:geometryNodes) {
 
 
 
-#### <a name="FBXNode.getName" />getName()
+#### getName()
 
 Returns the name of the node as **String**.
 
@@ -254,7 +254,7 @@ for (int i = 0; i < count; i++) {
 
 
 
-#### <a name="FBXNode.getNodeFromPath" />getNodeFromPath(String path)
+#### getNodeFromPath(String path)
 
 Returns the node at the specified path. If found, returns **FBXNode**. If not found returns **null**.
 Path is made up of node names separated by "/".
@@ -272,7 +272,7 @@ FBXNode verticesNode = root
 
 
 
-#### <a name="FBXNode.getNumChildren" />getNumChildren()
+#### getNumChildren()
 
 Returns the number of child nodes as **int**.
 
@@ -289,7 +289,7 @@ for (int i = 0; i < count; i++) {
 
 
 
-#### <a name="FBXNode.getNumProperties" />getNumProperties()
+#### getNumProperties()
 
 Returns the number of properties as **int**.
 
@@ -306,7 +306,7 @@ for (int i = 0; i < count; i++) {
 
 
 
-#### <a name="FBXNode.getParent" />getParent()
+#### getParent()
 
 Returns the parent node as **FBXNode**. Root always returns **null**.
 
@@ -318,7 +318,7 @@ FBXNode parent = node.getParent();
 
 
 
-#### <a name="FBXNode.getProperty" />getProperty(int index)
+#### getProperty(int index)
 
 Returns the property at the specified index as **FBXProperty**.
 
@@ -337,10 +337,10 @@ for (int i = 0; i < count; i++) {
 
 
 
-<a name="FBXProperty" />Class FBXProperty
+Class FBXProperty
 --------------
 
-### <a name="FBXProperty_Functions" />Functions
+### Functions
 
 | Type     | Function      | Return Type | Description             |
 | -------- | ------------- | ----------- | ----------------------- |
@@ -350,7 +350,7 @@ for (int i = 0; i < count; i++) {
 
 
 
-#### <a name="FBXProperty.getData" />getData()
+#### getData()
 
 Returns the data as **Object**. The data has to be casted to it's proper data type for use.
 Data type should be checked before casting.
@@ -369,7 +369,7 @@ float[] floatArray = (float[]) p1.getData();    // get data of property 1 as 'fl
 
 
 
-#### <a name="FBXProperty.getDataType" />getDataType()
+#### getDataType()
 
 Returns the data type as **FBXDataType** Enum. This can be used to check if FBXProperty has the expected data type before casting data.
 
@@ -390,7 +390,7 @@ if (property.getDataType() != FBXDataType.FLOAT_ARRAY) {
 
 
 
-#### <a name="FBXProperty.getParent" />getParent()
+#### getParent()
 
 Returns the parent node as **FBXNode**.
 
@@ -402,30 +402,30 @@ FBXNode parent = property.getParent();
 
 
 
-<a name="FBXDataType" />Enum FBXDataType
+Enum FBXDataType
 ----------------
 
-### <a name="FBXDataType_Members" />Members
+### Members
 
-| Member        | Byte Size (of a single data element) | FBXDataCategory |
-| ------------- | ------------------------------------ | --------------- |
-| BOOLEAN       | 1                                    | BASIC           |
-| DOUBLE        | 8                                    | BASIC           |
-| FLOAT         | 4                                    | BASIC           |
-| INT           | 4                                    | BASIC           |
-| LONG          | 8                                    | BASIC           |
-| SHORT         | 2                                    | BASIC           |
-| BOOLEAN_ARRAY | 1                                    | ARRAY           |
-| DOUBLE_ARRAY  | 8                                    | ARRAY           |
-| FLOAT_ARRAY   | 4                                    | ARRAY           |
-| INT_ARRAY     | 4                                    | ARRAY           |
-| LONG_ARRAY    | 8                                    | ARRAY           |
-| RAW           | 0 (arbitrary)                        | SPECIAL         |
-| STRING        | 0 (arbitrary)                        | SPECIAL         |
+| Member        | Byte Size (internal use) | FBXDataCategory |
+| ------------- | -------------------------| --------------- |
+| BOOLEAN       | 1                        | BASIC           |
+| DOUBLE        | 8                        | BASIC           |
+| FLOAT         | 4                        | BASIC           |
+| INT           | 4                        | BASIC           |
+| LONG          | 8                        | BASIC           |
+| SHORT         | 2                        | BASIC           |
+| BOOLEAN_ARRAY | 1                        | ARRAY           |
+| DOUBLE_ARRAY  | 8                        | ARRAY           |
+| FLOAT_ARRAY   | 4                        | ARRAY           |
+| INT_ARRAY     | 4                        | ARRAY           |
+| LONG_ARRAY    | 8                        | ARRAY           |
+| RAW           | 0 (arbitrary)            | SPECIAL         |
+| STRING        | 0 (arbitrary)            | SPECIAL         |
 
 
 
-### <a name="FBXDataType_Functions" />Functions
+### Functions
 
 | Function                             | Return Type | Description                                            |
 | ------------------------------------ | ----------- | ------------------------------------------------------ |
@@ -434,7 +434,7 @@ FBXNode parent = property.getParent();
 
 
 
-#### <a name="FBXDataType.isCategory" />isCategory(FBXDataCategory category)
+#### isCategory(FBXDataCategory category)
 
 Returns **true** if the data type is of specified category.
 
@@ -447,7 +447,7 @@ boolean isBasicData = dataType.isCategory(FBXDataCategory.BASIC);
 
 
 
-#### <a name="FBXDataType.isArray" />isArray()
+#### isArray()
 
 Returns **true** if the data type is of category ARRAY.
 
@@ -462,10 +462,10 @@ boolean isArray = dataType.isCategory(FBXDataCategory.ARRAY);
 
 
 
-<a name="FBXDataCategory" />Enum FBXDataCategory
+Enum FBXDataCategory
 ------
 
-### <a name="FBXDataCategory_Members" />Members
+### Members
 
 |Member|
 |------|
