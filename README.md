@@ -70,7 +70,7 @@ Contents
 
 
 
-<a name="FBXLoader" />Class FBXLoader
+Class FBXLoader{#FBXLoader}
 ---------------
 
 ### <a name="FBXLoader_Functions" />Functions
