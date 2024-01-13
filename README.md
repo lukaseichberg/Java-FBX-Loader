@@ -36,8 +36,8 @@ Documentation
 Contents
 ---------------------
 
-- [Class FBXLoader](#FBXLoader)
-  - [Functions](#FBXLoader_Functions)
+- [Class FBXLoader](#class-fbxloader)
+  - [Functions](#fbxloader-functions)
     - [loadFBXFile(String filePath)](#FBXLoader.loadFBXFile)
 - [Class FBXFile](#FBXFile)
   - [Functions](#FBXFile_Functions)
@@ -70,10 +70,9 @@ Contents
 
 
 
-Class FBXLoader{#FBXLoader}
----------------
+## Class FBXLoader
 
-### <a name="FBXLoader_Functions" />Functions
+### FBXLoader Functions
 
 | Type   | Function                     | Return Type | Description      |
 | ------ | ---------------------------- | ----------- | ---------------- |
