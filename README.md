@@ -28,7 +28,7 @@ double[] vertices = (double[]) property.getData();
 
 **Note that this is just a very basic example. FBX files can contain multiple *Geometry* nodes and be a lot more complex in structure.**
 
-Download jar file [here](https://raw.githubusercontent.com/lukaseichberg/Java-FBX-Loader/main/jar/java-fbx-loader-v1.0.jar).
+Download library as jar file [here](https://raw.githubusercontent.com/lukaseichberg/Java-FBX-Loader/main/jar/java-fbx-loader-v1.0.jar).
 
 
 Documentation
