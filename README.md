@@ -435,19 +435,6 @@ Enum FBXDataType
 
 
 
-#### isCategory(FBXDataCategory category)
-
-Returns **true** if the data type is of specified category.
-
-##### Example:
-
-```java
-FBXDataType dataType = property.getDataType();
-boolean isBasicData = dataType.isCategory(FBXDataCategory.BASIC);
-```
-
-
-
 #### isArray()
 
 Returns **true** if the data type is of category ARRAY.
@@ -459,6 +446,18 @@ FBXDataType dataType = property.getDataType();
 boolean isArray = dataType.isArray();
 // is the same as
 boolean isArray = dataType.isCategory(FBXDataCategory.ARRAY);
+```
+
+
+#### isCategory(FBXDataCategory category)
+
+Returns **true** if the data type is of specified category.
+
+##### Example:
+
+```java
+FBXDataType dataType = property.getDataType();
+boolean isBasicData = dataType.isCategory(FBXDataCategory.BASIC);
 ```
 
 
