@@ -107,4 +107,38 @@ public class FBXNode {
 	public String getFullName () {
 		return (parent == null) ? name : parent.getFullName() + "/" + name;
 	}
+
+	/**
+	 * Convenience: get the data at property index 0 and cast it to the specified type.
+	 * May cause a runtime error if the type is not as anticipated!
+	 */
+	public <T> T getData () {
+		return getData(0);
+	}
+
+	/**
+	 * Convenience: get the data at the specified property index and cast it to the specified type.
+	 * May cause a runtime error if the type is not as anticipated!
+	 */
+	public <T> T getData (int index) {
+		@SuppressWarnings("unchecked")
+		T tt = (T)getProperty(index).getData();
+		return tt;
+	}
+
+	/**
+	 * Get the data at property index 0 of the child with the specified name.
+	 * May cause a runtime error if the type is not as anticipated!
+	 */
+	public <T> T getChildProperty (String name) {
+		return getChildProperty(name, 0);
+	}
+
+	/**
+	 * Get the data at the specified property index of the child with the specified name.
+	 * May cause a runtime error if the type is not as anticipated!
+	 */
+	public <T> T getChildProperty (String name, int index) {
+		return getChildByName(name).getData(index);
+	}
 }
