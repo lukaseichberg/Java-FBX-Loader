@@ -74,7 +74,7 @@ public class FBXLoader {
 		}
 
 		if (buffer.position() < endOffset) {
-                        int endSize = getRecordSize();
+			int endSize = getRecordSize();
 			while (buffer.position() < (endOffset - endSize)) {
 				FBXNode child = readNodeRecord(node);
 				if (child != null) {
