@@ -101,4 +101,10 @@ public class FBXNode {
 		return name;
 	}
 
+	/**
+	 * Get the name of the node like "foo/bar/node".
+	 */
+	public String getFullName () {
+		return (parent == null) ? name : parent.getFullName() + "/" + name;
+	}
 }
